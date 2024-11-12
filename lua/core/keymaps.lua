@@ -2,6 +2,17 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- escape the terminal mode
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
+
+-- -- Copy to system clipboard
+vim.keymap.set('n', '<leader>y', '"+y', { noremap = true })
+vim.keymap.set('v', '<leader>y', '"+y', { noremap = true })
+
+-- Paste from system clipboard
+vim.keymap.set('n', '<leader>p', '"+p', { noremap = true })
+vim.keymap.set('v', '<leader>p', '"+p', { noremap = true })
+
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
